@@ -27,10 +27,8 @@ BEGIN
 	end
 	else
 	begin
-		/*Hay dos formas de hacer esto, por ahora solo hacemos la simplpe de actualizar los que tengan el superSSN del manager*/
 		UPDATE Department SET MgrSSN = @MgrSSN WHERE DNumber = @DNumber;
-		--UPDATE Employee SET SuperSSN = NULL WHERE Dno = @DNumber;
-		--UPDATE Employee SET SuperSSN = @MgrSSN WHERE SuperSSN = @MgrSSN;
+		UPDATE Employee SET SuperSSN = @MgrSSN WHERE Dno = @DNumber AND SSN !=@MgrSSN;
 		UPDATE Department Set MgrStartDate = getdate() WHERE DNumber = @DNumber;
 	end
 END
