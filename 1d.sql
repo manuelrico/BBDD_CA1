@@ -36,8 +36,22 @@ in the Employee relation working in the deleted department should have the Dno a
     -- Insert statements for procedure here
 	DELETE Department where DNumber = @DNumber;
 	DELETE Dept_Locations where DNUmber = @DNumber;
-	DELETE Works_on where Pno = @DNumber;
-	/*Get the Pno from the Project´s table where the DNUm = @DNUmber*/
+	DECLARE @PruebaPNo uniqueidentifier
+	DECLARE @Pno uniqueidentifier
+	DECLARE @tries int
+	SET @tries = 0;
+	SET @PruebaPNo = (Select Count(PNumber) from Project where DNum = @DNumber)
+	WHILE @PruebaPNo > 0
+	BEGIN
+		SET @Pno = (Select TOP 1 percent Pnumber FROM Project where DNum = @DNumber)
+		DELETE Works_on where @Pno = Pno;
+		SET @PruebaPNo = (Select Count(PNumber) from Project where DNum = @DNumber)
+		SET @tries = @tries + 1;
+		IF @PruebaPNo = @tries
+			BREAK
+		ELSE	
+			CONTINUE
+	END
 	DELETE Project where DNUm = @DNumber;
 	UPDATE Employee SET Dno = NULL where Dno = @DNumber;
 
