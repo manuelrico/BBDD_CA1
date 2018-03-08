@@ -1,0 +1,7 @@
+C:\Users\Pinguino\Documents\Visual Studio 2017\Projects\Compulsory Database\Compulsory Database\bin\Debug\Compulsory Database.exe.config
+C:\Users\Pinguino\Documents\Visual Studio 2017\Projects\Compulsory Database\Compulsory Database\bin\Debug\Compulsory Database.exe
+C:\Users\Pinguino\Documents\Visual Studio 2017\Projects\Compulsory Database\Compulsory Database\bin\Debug\Compulsory Database.pdb
+C:\Users\Pinguino\Documents\Visual Studio 2017\Projects\Compulsory Database\Compulsory Database\obj\Debug\Compulsory Database.csprojResolveAssemblyReference.cache
+C:\Users\Pinguino\Documents\Visual Studio 2017\Projects\Compulsory Database\Compulsory Database\obj\Debug\Compulsory Database.csproj.CoreCompileInputs.cache
+C:\Users\Pinguino\Documents\Visual Studio 2017\Projects\Compulsory Database\Compulsory Database\obj\Debug\Compulsory Database.exe
+C:\Users\Pinguino\Documents\Visual Studio 2017\Projects\Compulsory Database\Compulsory Database\obj\Debug\Compulsory Database.pdb

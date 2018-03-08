@@ -1,6 +1,6 @@
 USE [Company]
 GO
-/****** Object:  StoredProcedure [dbo].[usp_GetAllDepartments]    Script Date: 05/03/2018 15:10:45 ******/
+/****** Object:  StoredProcedure [dbo].[usp_GetAllDepartments]    Script Date: 08/03/2018 11:47:08 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -20,7 +20,7 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	SELECT DName, Count(*) AS 'Total Number Of Employees'
-	FROM Department JOIN Employee ON Dnumber = Dno
+	SELECT DName, Count(FName) AS 'Total Number Of Employees'
+	FROM Department LEFT JOIN Employee ON Dnumber = Dno
 	GROUP BY DName, DNumber;
 END
